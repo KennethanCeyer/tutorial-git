@@ -180,5 +180,26 @@
  - 서로다른 브랜치들은 같은 조상을 가지고 있다.
 
 - 브랜치를 새로 만드신다면 `git branch [브랜치명]`으로 생성합니다.
+- 아래 명령라인에서는 new라는 브랜치를 생성하고 있습니다.
+
+ ```shell
+    git branch new
+```
+
+- master 기준으로 new를 브랜치(가지치기)하면 master와 똑같은 소스코드가 new에도 적용됩니다.
+- 하지만 이 이후로 new에서 코드를 수정하면, master와 new는 서로 다른 코드가 되기 때문에 갈라집니다.
+
+- 생성된 new 브랜치로 접속하기 위해서는 `git checkout [브랜치명]`을 이용합니다.
+
+ ```shell
+    git checkout new
+```
+
+ - 생성과정과 브랜치 이동과정을 동시에 하고자 하면 `git checkout`에 `-b` 옵션을 이용합니다.
+
+ ```shell
+    // 브랜치 new를 생성과 동시에 체크아웃.
+    git checkout -b new
+```
 
  ![Refer5](http://www.nhpcw.com/upload/2016-01-06%2B14%253B42%253B40_010616024311.PNG)
