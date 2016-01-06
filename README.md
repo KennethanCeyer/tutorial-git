@@ -51,6 +51,9 @@
  ```shell
    git remote add origin https://github.com/KennethanCeyer/tutorial.git
 ```
+
+----
+
 #### 소스 기록, 업로드
 
 - 소스를 업로드 하기 위해서는 `git add` 명령어를 이용합니다.
@@ -69,6 +72,8 @@
 - `git remote show origin`을 통해 origin에 리모트 주소가 잘 등록되었는지 확인해보세요.
 
  ![Refer2](http://www.nhpcw.com/upload/2016-01-06%2B12%253B06%253B22_010616120718.PNG)
+
+----
 
 #### 소스 커밋, 메시지 작성
 
