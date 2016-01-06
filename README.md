@@ -37,6 +37,13 @@
 ### 깃의 기능
 
 #### 깃의 설정 (클라이언트)
+- 처음 시작하는 것이라면 git의 config 과정을 진행해야합니다.
+- `git config` 명령어를 이용하여 계정에 대한 정보를 설정합니다.
+
+ ```shell
+    git config --global user.name "John Doe"
+    git config --global user.email johndoe@example.com
+```
 
 - 깃은 초기에 `git init` 작업을 진행합니다
 - 혹여나 GitHub에서 클론을 받은경우 이 작업은 필요하지 않습니다.
