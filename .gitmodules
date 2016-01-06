@@ -1,0 +1,6 @@
+[submodule "tutorial/conflict"]
+    path = tutorial/conflict
+    url = https://github.com/KennethanCeyer/tutorial-git-conflict.git
+[submodule "tutorial/merge"]
+    path = tutorial/merge
+    url = https://github.com/KennethanCeyer/tutorial-git-merge.git
