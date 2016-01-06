@@ -77,4 +77,4 @@
 
 - `git add` 이후 `git status`를 하면 아래와 같은 화면이 나옵니다.
 
-![Refer01](http://www.nhpcw.com/upload/2016-01-06%2B11%253B59%253B51_010616120036.PNG)
+ ![Refer01](http://www.nhpcw.com/upload/2016-01-06%2B11%253B59%253B51_010616120036.PNG)
