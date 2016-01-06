@@ -41,8 +41,8 @@
 - `git config` 명령어를 이용하여 계정에 대한 정보를 설정합니다.
 
  ```shell
-    git config --global user.name "John Doe"
-    git config --global user.email johndoe@example.com
+    git config --global user.name "Kenneth"
+    git config --global user.email kennethan@nhpcw.com
 ```
 
 - 깃은 초기에 `git init` 작업을 진행합니다
