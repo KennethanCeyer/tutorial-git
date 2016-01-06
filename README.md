@@ -169,6 +169,11 @@
 
 - 브랜치는 한국말로 가지(branch)입니다.
 - git에서는 마치 가지를 펼치듯 하나의 근본에서 여러 갈래로 쪼개어 관리할 수 있습니다.
+
+ ![Refer4](http://www.nhpcw.com/upload/4n9OG_010616025217.png)
+ 이미지 출처 [StackOverflow](http://stackoverflow.com/questions/23142731/push-a-feature-branch-to-develop-branch-using-git)
+
+
 - branch의 특징은 아래와 같습니다.
 
  - 기본은 master 브랜치라고 불리며, 필수로 제공되는 브랜치이다.
@@ -176,4 +181,4 @@
 
 - 브랜치를 새로 만드신다면 `git branch [브랜치명]`으로 생성합니다.
 
- ![Refer4](http://www.nhpcw.com/upload/2016-01-06%2B14%253B42%253B40_010616024311.PNG)
+ ![Refer5](http://www.nhpcw.com/upload/2016-01-06%2B14%253B42%253B40_010616024311.PNG)
