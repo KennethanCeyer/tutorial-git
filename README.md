@@ -59,7 +59,7 @@
     git clone https://github.com/KennethanCeyer/tutorial.git
 ```
 
- - `git clone`을 통해 원격파일을 복사해오면, origin에는 기본적으로 클론해온 리모트 URL이 저장되있습니다.
+- `git clone`을 통해 원격파일을 복사해오면, origin에는 기본적으로 클론해온 리모트 URL이 저장되있습니다.
 
 ----
 
