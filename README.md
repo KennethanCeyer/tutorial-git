@@ -210,6 +210,10 @@
     git push new
 ```
 
+- 브랜치 생성 및 등록의 과정은 아래 화면가 같습니다.
+
+ ![Refer5](http://www.nhpcw.com/upload/2016-01-06%2B14%253B42%253B40_010616024311.PNG)
+
 - 브랜치의 삭제는 `git branch` 명령에서 `-d` 옵션을 사용합니다.
 
  ```shell
@@ -217,4 +221,3 @@
     git branch -d new
 ```
 
- ![Refer5](http://www.nhpcw.com/upload/2016-01-06%2B14%253B42%253B40_010616024311.PNG)
