@@ -15,11 +15,11 @@
 ##### 깃을 왜 사용하죠?
 
 - 빠른 협업환경 조성
-- 누가 언제 무엇을 왜 수정했는지 코드리뷰가 가능
-- IssueTracker 및 Migrate 지원
-- GitHub를 이용하여 자신의 git을 쉽게 전파, 공유가 가능
-- Continuous Integration (지속적인 통합) 지원
-- VisualStudio, Eclipse, Android Studio 등 많은 부분에서 Git연동 제공
+- 누가 언제 무엇을 왜 수정했는지 코드리뷰가 가능.
+- IssueTracker 및 Migrate 연동 지원.
+- GitHub를 이용하여 자신의 git을 쉽게 전파, 공유가 가능.
+- Continuous Integration (지속적인 통합) 지원.
+- VisualStudio, Eclipse, Android Studio 등 많은 부분에서 Git연동 제공.
 
 - **결국 대게는 협업을 위해서 사용**
 
