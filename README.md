@@ -52,6 +52,15 @@
    git remote add origin https://github.com/KennethanCeyer/tutorial.git
 ```
 
+- 깃의 리모트 URL을 이용하여 원격저장소에 저장된 파일을 컴퓨터로 복사해올 수 있습니다.
+- 이때 `git clone`을 사용하여 복사를 시작합니다.
+
+ ```shell
+    git clone https://github.com/KennethanCeyer/tutorial.git
+```
+
+ - `git clone`을 통해 원격파일을 복사해오면, origin에는 기본적으로 클론해온 리모트 URL이 저장되있습니다.
+
 ----
 
 #### 소스 기록, 업로드
