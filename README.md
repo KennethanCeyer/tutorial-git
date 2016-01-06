@@ -236,3 +236,7 @@
 - 브랜치를 사용하는 과정에서 가장 중요한 머지와 리베이스 등의 병합 기법입니다.
 - 서로 다른 브랜치에서 서로 다른 코드가 개발되었고, 실제 배포에서 이를 합쳐야 할 때 사용합니다.
 - 병합 방식에서는 크게 `git merge`와 `git rebase`가 존재합니다.
+- 머지 방식과 리베이스 방식의 차이는 아래 이미지를 확인해주세요.
+
+ ![Refer6](http://www.nhpcw.com/upload/merge-rebase_010616040840.png)
+ 이미지 출처 [http://git.mikeward.org/](http://git.mikeward.org/)
