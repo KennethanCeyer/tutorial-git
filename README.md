@@ -66,6 +66,10 @@
     git add * -f
 ```
 
+- `git remote show origin`을 통해 origin에 리모트 주소가 잘 등록되었는지 확인해보세요.
+
+ ![Refer2](http://www.nhpcw.com/upload/2016-01-06%2B12%253B06%253B22_010616120718.PNG)
+
 #### 소스 커밋, 메시지 작성
 
 - 소스를 커밋하시면 `Tracked` 상태에서 `Stage` 상태로 변경됩니다.
