@@ -202,4 +202,19 @@
     git checkout -b new
 ```
 
+- 생성한 브랜치는 현재 로컬에 저장되어 있습니다.
+- 협업 작업에서는 생성한 브랜치를 원격 저장소에 등록해주어야 합니다.
+- 이때는 `git push [브랜치명]`을 이용합니다.
+
+ ```shell
+    git push new
+```
+
+- 브랜치의 삭제는 `git branch` 명령에서 `-d` 옵션을 사용합니다.
+
+ ```shell
+    // 브랜치 new 삭제.
+    git branch -d new
+```
+
  ![Refer5](http://www.nhpcw.com/upload/2016-01-06%2B14%253B42%253B40_010616024311.PNG)
