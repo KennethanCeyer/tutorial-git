@@ -239,4 +239,5 @@
 - 머지 방식과 리베이스 방식의 차이는 아래 이미지를 확인해주세요.
 
  ![Refer6](http://www.nhpcw.com/upload/merge-rebase_010616040840.png)
+ 
  이미지 출처 [http://git.mikeward.org/](http://git.mikeward.org/)
