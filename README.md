@@ -41,13 +41,13 @@
 - 깃은 초기에 `git init` 작업을 진행합니다
 - 혹여나 GitHub에서 클론을 받은경우 이 작업은 필요하지 않습니다.
 - 아래 샘플 코드를 확인해주세요.
-- 
+
  ```shell
     git init
 ```
 - `git init`을 하셨으면 Git 리모트를 설정하실 수 있습니다.
 - Git 리모트란 Git을 원격저장소에 저장하는 앤드포인트를 의미합니다.
-- 
+
  ```shell
    git remote add origin https://github.com/KennethanCeyer/tutorial.git
 ```
@@ -55,7 +55,7 @@
 
 - 소스를 업로드 하기 위해서는 `git add` 명령어를 이용합니다.
 - 샘플을 참고하세요
-- 
+
  ```shell
     git add *
 ```
