@@ -276,3 +276,12 @@
     // HEAD -> master
     // sub  -> sub
 ```
+
+- 머지 이후 master에서 파일을 보면, 아래와 같은 내용을 얻습니다.
+
+ ```txt
+    * merge 이후 master -> some_file.txt
+    I'm a file.
+    
+    Inserted new line from the sub branch.
+```
