@@ -180,7 +180,19 @@
 
 #### 소스 업데이트, 커밋된 내용 다운로드
 
-- 작업중입니다.
+- 상대방이 커밋한 파일은 명령어를 통해서 직접 업데이트를 하셔야 동기화가 됩니다.
+- 이때 사용하는 명령어는 `git pull`과 `git fetch`가 있습니다.
+
+ ```shell
+    // master 브랜치를 pull하여 업데이트
+    git pull origin master
+    
+    // master 브랜치를 fetch하여 업데이트
+    git fetch origin master
+```
+
+- Pull과 Fetch의 차이점은 merge 작업을 하느냐 안하느냐로 나뉘어지며.
+- Pull은 Fetch + Merge 작업이라고 생각하시면 됩니다.
 
 ----
 
