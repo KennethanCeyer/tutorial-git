@@ -343,7 +343,7 @@
     Strawberry
 ```
 
-- 수정이 되었다면 머지 해결을 위해 `git add`와 `git commit`으로 충돌(conflict)를 해결하세요.
+- 수정이 되었다면 머지 해결을 위해 `git add`와 `git commit`으로 충돌(conflict)을 해결하세요.
 
  ```shell
     git add *
