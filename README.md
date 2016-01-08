@@ -254,11 +254,13 @@
 
  ```txt
     * master -> some_file.txt의 내용
+    * 1번째 단계 HEAD
     I'm a file.
 ```
 
-```txt
+ ```txt
     * sub -> some_file.txt의 내용
+    * 2번째 단계 HEAD (최신)
     I'm a file.
     
     Inserted new line from the sub branch.
