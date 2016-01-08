@@ -247,3 +247,16 @@
  ![Refer6](http://www.nhpcw.com/upload/merge-rebase_010616040840.png)
  
  이미지 출처 [http://git.mikeward.org/](http://git.mikeward.org/)
+
+- 아래는 머지해야 하는 상황을 구현해봤습니다.
+- `master`에서 `sub` branch가 생성되었으며, master 브랜치에서 sub 브랜치를 머지하고자 합니다.
+- 자세한 부분은 해당 깃의 `Tutorial/Merge`를 참고해주세요.
+
+ ```shell
+    git checkout -f master
+    git merge sub
+    // 현재 브랜치 master, 대상 브랜치 sub.
+    // master에서 sub를 머지합니다.
+    // HEAD -> master
+    // sub  -> sub
+```
