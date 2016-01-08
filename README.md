@@ -321,3 +321,31 @@
 - 아래 이미지는 위의 작업 과정 중 머지 시도 이후 충돌발생(conflict) 화면을 보여줍니다.
  
  ![Refer7](http://www.nhpcw.com/upload/2016-01-08%2B10%253B55%253B53_010816105630.PNG)
+
+- 충돌이 발생한 some_file.txt를 열어보면 아래와 같은 화면을 보실 수 있습니다.
+
+ ```txt
+    * 머지 이후 master -> some_file.txt (충돌)
+    <<<<<<< HEAD
+    Strawberry
+    =======
+    Banana
+    >>>>>>> sub
+```
+
+- 여기서 `HEAD`는 현재 브랜치(master)를 의미합니다.
+- HEAD와 sub의 각각 내용을 보여주고 있는데 꺽쇠(<, >), 이퀄(=)기호가 없도록 문장 하나를 선택해서 반영해주어야
+- 충돌이 해결 될 수 있습니다.
+- 여기서는 `master` 브랜치의 Strawberry를 선택하여 충돌을 해결하겠습니다.
+
+ ```txt
+    * 머지 이후 master -> some_file.txt (수정)
+    Strawberry
+```
+
+- 수정이 되었다면 머지 해결을 위해 `git add`와 `git commit`으로 충돌(conflict)를 해결하세요.
+
+ ```shell
+    git add *
+    git commit -m "Solved the conflict issue."
+```
