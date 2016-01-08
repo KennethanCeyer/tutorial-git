@@ -114,6 +114,10 @@
     Remote URL은 ssh 포맷을 사용해주셔야 ssh 인증을 통해 아이디/비밀번호 입력을 넘어가실 수 있습니다.
     
     // origin의 Remote URL 변경방법.
+    git remote set-url origin git@github.com:KennethanCeyer/tutorial-git.git
+    
+    // origin의 Remote URL이 제대로 변경됬는지 체크해주세요.
+    git remote show origin
 ```
 
 ----
