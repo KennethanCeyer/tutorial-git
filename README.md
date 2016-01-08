@@ -88,7 +88,7 @@
 
  ![Refer folder ssh](http://www.nhpcw.com/upload/2016-01-08%2B16%253B39%253B20_010816045855.PNG)
  
-- 생성한 키 중 id_rsa.pub는 GitHub에 등록해주셔야 합니다.
+- 생성한 키 중 `id_rsa.pub`는 GitHub에 등록해주셔야 합니다.
 - 아래 절차를 따라해주시면 됩니다.
 - [GitHub 홈페이지](http://www.github.com)를 접속하셔서 로그인을 해주세요.
 - Profile 중 `Settings` 메뉴를 눌러주세요 (아래 그림을 참고해주세요.)
@@ -98,6 +98,14 @@
 - Settings 화면 중 우측 사이드메뉴에서 `SSH keys`를 클릭해주세요.
 
  ![Refer SSH Keys](http://www.nhpcw.com/upload/2016-01-08%2B16%253B31%253B47_010816050114.PNG)
+ 
+- SSH Keys 화면에서 `Add SSH key` 버튼을 찾아 클릭 해주세요.
+
+ ![Refer Add SSH key](http://www.nhpcw.com/upload/2016-01-08%2B16%253B38%253B21_010816050320.PNG)
+ 
+- 입력 화면에 아까전의 `id_rsa.pub`의 내용을 입력해주시면 됩니다.
+
+ ![Refer SSH contents](http://www.nhpcw.com/upload/2016-01-08%2B16%253B39%253B35_010816050252.PNG)
 
 ----
 
