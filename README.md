@@ -106,6 +106,15 @@
 - 입력 화면에 아까전의 `id_rsa.pub`의 내용을 입력해주시면 됩니다.
 
  ![Refer SSH contents](http://www.nhpcw.com/upload/2016-01-08%2B16%253B39%253B35_010816050252.PNG)
+ 
+- **SSH 설정을 해도 아이디와 비밀번호를 물어봐요!**
+
+ ```shell
+    혹시 HTTPS 주소를 Remote URL로 사용하는지 체크해주세요.
+    Remote URL은 ssh 포맷을 사용해주셔야 ssh 인증을 통해 아이디/비밀번호 입력을 넘어가실 수 있습니다.
+    
+    // origin의 Remote URL 변경방법.
+```
 
 ----
 
