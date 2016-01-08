@@ -250,6 +250,20 @@
 
 - 아래는 머지해야 하는 상황을 구현해봤습니다.
 - `master`에서 `sub` branch가 생성되었으며, master 브랜치에서 sub 브랜치를 머지하고자 합니다.
+- 파일 구성은 아래와 같습니다.
+
+ ```txt
+    * master -> some_file.txt의 내용
+    I'm a file.
+```
+
+```txt
+    * sub -> some_file.txt의 내용
+    I'm a file.
+    
+    Inserted new line from the sub branch.
+```
+
 - 자세한 부분은 해당 깃의 `Tutorial/Merge`를 참고해주세요.
 
  ```shell
