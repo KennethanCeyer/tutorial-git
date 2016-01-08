@@ -76,6 +76,31 @@
 
 ----
 
+#### SSH 접속설정
+
+- 깃 연결을 보다 안전하고 빠르게 하기 위해서는 `SSH Key` 등록을 권장합니다.
+- 이미 존재하는 문서로 [SSH 생성 가이드](https://git-scm.com/book/ko/v1/Git-%EC%84%9C%EB%B2%84-SSH-%EA%B3%B5%EA%B0%9C%ED%82%A4-%EB%A7%8C%EB%93%A4%EA%B8%B0)를 참고하시거나 아래 절차를 따라주시면 됩니다.
+- 우선 `ssh-keygen`으로 SSH Key를 생성하시면 됩니다.
+
+ ![Refer SSH](http://www.nhpcw.com/upload/2016-01-08%2B16%253B55%253B56_010816045725.PNG)
+ 
+- SSH Key를 생성하셨으면 ~/[사용자 폴더]/.ssh/에 파일이 존재하는 것을 확인하실 수 있습니다.
+
+ ![Refer folder ssh](http://www.nhpcw.com/upload/2016-01-08%2B16%253B39%253B20_010816045855.PNG)
+ 
+- 생성한 키 중 id_rsa.pub는 GitHub에 등록해주셔야 합니다.
+- 아래 절차를 따라해주시면 됩니다.
+- [GitHub 홈페이지](http://www.github.com)를 접속하셔서 로그인을 해주세요.
+- Profile 중 `Settings` 메뉴를 눌러주세요 (아래 그림을 참고해주세요.)
+
+ ![Refer Setting](http://www.nhpcw.com/upload/2016-01-08%2B16%253B31%253B33_010816050048.PNG)
+ 
+- Settings 화면 중 우측 사이드메뉴에서 `SSH keys`를 클릭해주세요.
+
+ ![Refer SSH Keys](http://www.nhpcw.com/upload/2016-01-08%2B16%253B31%253B47_010816050114.PNG)
+
+----
+
 #### 소스 기록, 업로드
 
 - 소스를 업로드 하기 위해서는 `git add` 명령어를 이용합니다.
