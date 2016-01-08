@@ -285,3 +285,39 @@
     
     Inserted new line from the sub branch.
 ```
+
+----
+
+#### 충돌과 해결
+
+- git으로 merge, rebase 수행시 충돌(conflict)가 발생 할 수 있습니다.
+- 이는 같은 조상을 기준으로, 서로 다른 두개의 브랜치가 같은 소스코드를 변경했을 때 발생합니다.
+- 아래는 샘플 환경입니다. `Tutorial/Conflict`를 참고해주세요.
+
+ ```txt
+    * master -> some_file.txt의 내용
+    Apple
+```
+
+- 위는 `master` 브랜치의 some_file.txt의 내용이다.
+- 아래는 해당 브랜치를 복제한 `sub` 브랜치이며, 복제 이후 한번 내용을 수정하였다.
+
+ ```txt
+    * sub -> some_file.txt의 내용
+    * 2번째 단계 HEAD
+    Banana
+```
+
+- 이후 master에서도 내용을 변경하여 버전을 업데이트 합니다.
+ 
+ ```txt
+    * master -> some_file.txt의 내용
+    * 2번째 단계 HEAD(sub랑 단계가 겹침)
+    Strawberry
+```
+
+- 둘 모두 버전이 같으나 같은 라인에서 변경사항이 발생했습니다.
+- 이 경우 충돌이 발생합니다.
+- 아래 이미지는 위의 작업 과정 중 머지 시도 이후 충돌발생(conflict) 화면을 보여줍니다.
+ 
+![Refer7](http://www.nhpcw.com/upload/2016-01-08%2B10%253B55%253B53_010816105630.PNG)
