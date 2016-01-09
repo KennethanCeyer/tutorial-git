@@ -1,5 +1,7 @@
 # Tutorial GIT
 
+[![Join the chat at https://gitter.im/KennethanCeyer/tutorial-git](https://badges.gitter.im/KennethanCeyer/tutorial-git.svg)](https://gitter.im/KennethanCeyer/tutorial-git?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 ### 어떻게 깃을 사용하는지 빠르게 알아봅시다.
 > Quick learn How to use the Git.
 
