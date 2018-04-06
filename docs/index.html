@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="kr">
 <head>
   <meta charset="UTF-8">
   <title>Document</title>
@@ -10,12 +10,24 @@
 </head>
 <body>
   <div id="app"></div>
+  <link rel="stylesheet" href="//unpkg.com/docsify-copy-code/styles.css">
+  <script src="//unpkg.com/docsify-copy-code/index.js"></script>
+  <script src="//unpkg.com/docsify-edit-on-github@1.0.1/index.js"></script>
   <script>
     window.$docsify = {
-      name: '',
-      repo: ''
+      loadSidebar: false,
+      name: 'tutorial-git',
+      repo: 'https://github.com/KennethanCeyer/tutorial-git',
+      disqus: 'tutorial-git',
+      plugins: [
+        EditOnGithubPlugin.create('https://github.com/KennethanCeyer/tutorial-git/blob/master/docs/'),
+        window.DocsifyCopyCodePlugin.init()
+      ]
     }
   </script>
   <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+  <script src="//unpkg.com/docsify/lib/plugins/emoji.min.js"></script>
+  <script src="//unpkg.com/docsify/lib/plugins/disqus.min.js"></script>
+  <script src="//unpkg.com/prismjs/components/prism-bash.min.js"></script>
 </body>
 </html>

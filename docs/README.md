@@ -218,8 +218,6 @@ $ git reset HEAD^ --soft
 - 현재위치(HEAD)를 기준하여 상대적인 위치를 설정하거나, 특정 버전 리비전 고유의 해시값을 지정합니다.
 - HEAD를 확인하시고 싶으면 `git reflog` 명령을 이용합니다.
 
- ![Git reset options](https://www.pigno.se/static/assets/images/git_tutorial_reset.gif)
-
 - `git reset`의 옵션 중 리셋 특성을 정하는 `--soft, --hard, --mixed` 옵션이 있습니다.
 - 위 옵션은 아래에서 자세히 설명합니다.
 
