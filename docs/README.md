@@ -4,7 +4,7 @@
 
 <p align="center">Quick learn How to use the Git</p>
 
-<p align="center"><a href="https://www.pigno.se/barn/tutorial-git" target="_blank">가이드 페이지에서 보기</a></p>
+<p align="center"><a href="https://www.pigno.se/barn/tutorial-git/docs" target="_blank">가이드 페이지에서 보기</a></p>
 
 ## :innocent: 바쁘잖아요 다들
 
