@@ -85,40 +85,40 @@ $ git clone https://github.com/KennethanCeyer/tutorial.git
 - 이미 존재하는 문서로 [SSH 생성 가이드](https://git-scm.com/book/ko/v1/Git-%EC%84%9C%EB%B2%84-SSH-%EA%B3%B5%EA%B0%9C%ED%82%A4-%EB%A7%8C%EB%93%A4%EA%B8%B0)를 참고하시거나 아래 절차를 따라주시면 됩니다.
 - 우선 `ssh-keygen` 명령어로 SSH Key를 생성하시면 됩니다.
 
- ![Refer SSH](http://www.pigno.se/static/assets/images/git_tutorial_refer_ssh.png)
+ ![Refer SSH](https://www.pigno.se/static/assets/images/git_tutorial_refer_ssh.png)
  
 - SSH Key를 생성하셨으면 `~/[사용자 폴더]/.ssh/` 에 파일이 존재하는 것을 확인하실 수 있습니다.
 
- ![Refer folder ssh](http://www.pigno.se/static/assets/images/git_tutorial_refer_ssh_folder.png)
+ ![Refer folder ssh](https://www.pigno.se/static/assets/images/git_tutorial_refer_ssh_folder.png)
  
 - 생성한 키 중 `id_rsa.pub`는 GitHub에 등록해주셔야 합니다.
 - 아래 절차를 따라해주시면 됩니다.
 - [GitHub 홈페이지](http://www.github.com)를 접속하셔서 로그인을 해주세요.
 - `Profile` 중 `Settings` 메뉴를 눌러주세요 (아래 그림을 참고해주세요.)
 
- ![Refer Setting](http://www.pigno.se/static/assets/images/git_tutorial_settings.png)
+ ![Refer Setting](https://www.pigno.se/static/assets/images/git_tutorial_settings.png)
  
 - `Settings` 화면 중 우측 사이드메뉴에서 `SSH and GPG keys`를 클릭해주세요.
 
- ![Refer SSH Keys](http://www.pigno.se/static/assets/images/git_tutorial_settings_sshkey.png)
+ ![Refer SSH Keys](https://www.pigno.se/static/assets/images/git_tutorial_settings_sshkey.png)
  
 - `SSH Keys` 화면에서 `New SSH key` 버튼을 찾아 클릭 해주세요.
 
- ![Refer New SSH key](http://www.pigno.se/static/assets/images/git_tutorial_refer_new_ssh_key.png)
+ ![Refer New SSH key](https://www.pigno.se/static/assets/images/git_tutorial_refer_new_ssh_key.png)
  
 - 입력 화면에 아까전의 `id_rsa.pub`의 내용을 입력해주시면 됩니다.
 
- ![Refer SSH contents](http://www.pigno.se/static/assets/images/git_tutorial_refer_ssh_pub_input.png)
+ ![Refer SSH contents](https://www.pigno.se/static/assets/images/git_tutorial_refer_ssh_pub_input.png)
  
 **Q. SSH 설정을 해도 아이디와 비밀번호를 물어봐요!**
 
 > 접속 정보에서 Use SSH를 클릭해 SSH 접속 정보를 이용하시기 바랍니다.
 
-![SSH connection string](http://www.pigno.se/static/assets/images/git_tutorial_use_sshkey.png)
+![SSH connection string](https://www.pigno.se/static/assets/images/git_tutorial_use_sshkey.png)
 
 이때, `git remote set-url` 명령어를 이용하여 기존의 원격지 주소를 수정해야 합니다.
 
-![SSH remote set-url](http://www.pigno.se/static/assets/images/git_tutorial_refer_set_url.png)
+![SSH remote set-url](https://www.pigno.se/static/assets/images/git_tutorial_refer_set_url.png)
 
  ```bash
 # 혹시 HTTPS 주소를 Remote URL로 사용하는지 체크해주세요.
@@ -148,7 +148,7 @@ $ git add . -f
 
 - `git remote show origin`을 통해 origin에 리모트 주소가 잘 등록되었는지 확인해보세요.
 
- ![Remote show origin](http://www.pigno.se/static/assets/images/git_tutorial_refer_remote_origin.png)
+ ![Remote show origin](https://www.pigno.se/static/assets/images/git_tutorial_refer_remote_origin.png)
 
 ## 소스 커밋
 
@@ -161,13 +161,13 @@ $ git status
 
 - `git add` 이후 `git status`를 하면 아래와 같은 화면이 나옵니다.
 
- ![Git add files](http://www.pigno.se/static/assets/images/git_tutorial_refer_add.png)
+ ![Git add files](https://www.pigno.se/static/assets/images/git_tutorial_refer_add.png)
 
 - Staged 상태의 파일은 아직 기록된 상태가 아닙니다.
 - 파일의 기록을 위해서는 `커밋` 작업이 필요합니다.
 - `git commit` 명령을 통해 Staged 상태의 파일을 커밋할 수 있습니다.
 
-![Git commit](http://www.pigno.se/static/assets/images/git_tutorial_refer_commit.png)
+![Git commit](https://www.pigno.se/static/assets/images/git_tutorial_refer_commit.png)
 
 - `-m` 옵션을 이용하여 커밋 메시지를 작성하는 것을 권장합니다.
 - 실수로 커밋을 하여, 다시 커밋을 할 경우 커밋을 덮어씌울 수 있습니다. 이때 `--amend` 옵션을 이용합니다.
@@ -212,7 +212,7 @@ $ git reset HEAD^ --soft
 - 현재위치(HEAD)를 기준하여 상대적인 위치를 설정하거나, 특정 버전 리비전 고유의 해시값을 지정합니다.
 - HEAD를 확인하시고 싶으면 `git reflog` 명령을 이용합니다.
 
- ![Git reset options](http://www.pigno.se/static/assets/images/git_tutorial_reset.gif)
+ ![Git reset options](https://www.pigno.se/static/assets/images/git_tutorial_reset.gif)
 
 - `git reset`의 옵션 중 리셋 특성을 정하는 `--soft, --hard, --mixed` 옵션이 있습니다.
 - 위 옵션은 아래에서 자세히 설명합니다.
@@ -239,7 +239,7 @@ $ git reset 991ee8c --mixed
 - 브랜치는 한국말로 가지(branch)입니다.
 - git에서는 마치 가지를 펼치듯 하나의 근본에서 여러 갈래로 쪼개어 관리할 수 있습니다.
 
- ![Git branch](http://www.pigno.se/static/assets/images/git_tutorial_branch.png)
+ ![Git branch](https://www.pigno.se/static/assets/images/git_tutorial_branch.png)
  이미지 출처 [StackOverflow](http://stackoverflow.com/questions/23142731/push-a-feature-branch-to-develop-branch-using-git)
 
 
@@ -281,11 +281,11 @@ $ git push new
 
 - 브랜치 생성 및 등록의 과정은 아래 화면과 같습니다.
 
- ![Git new branch](http://www.pigno.se/static/assets/images/git_tutorial_new_branch.png)
+ ![Git new branch](https://www.pigno.se/static/assets/images/git_tutorial_new_branch.png)
 
 - 브랜치의 삭제는 `git branch` 명령에서 `-d` 옵션을 사용합니다.
 
- ![Git delete branch](http://www.pigno.se/static/assets/images/git_tutorial_delete_branch.png)
+ ![Git delete branch](https://www.pigno.se/static/assets/images/git_tutorial_delete_branch.png)
 
 - 삭제된 브랜치 또한 원격 저장소에 반영을 해야합니다.
 - 이때 브랜치 명 앞에 콜론(:)을 붙여주어야 하니 이 점 주의해주세요.
@@ -297,7 +297,7 @@ $ git push new
 - 병합 방식에서는 크게 `git merge`와 `git rebase`가 존재합니다.
 - 머지 방식과 리베이스 방식의 차이는 아래 이미지를 확인해주세요.
 
- ![Difference between merge and rebase](http://www.pigno.se/static/assets/images/git_tutorial_merge_rebase.png)
+ ![Difference between merge and rebase](https://www.pigno.se/static/assets/images/git_tutorial_merge_rebase.png)
  
  이미지 출처 [http://git.mikeward.org/](http://git.mikeward.org/)
 
