@@ -1,58 +1,57 @@
-# Tutorial GIT
+<h1 align="center">어떻게 깃을 사용하는지 빠르게 알아봅시다</h1>
 
-[![Join the chat at https://gitter.im/KennethanCeyer/tutorial-git](https://badges.gitter.im/KennethanCeyer/tutorial-git.svg)](https://gitter.im/KennethanCeyer/tutorial-git?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
-### 어떻게 깃을 사용하는지 빠르게 알아봅시다.
-> Quick learn How to use the Git.
+<blockquote align="center">Quick learn How to use the Git</blockquote>
 
 - 읽는데 걸리는 예상시간 `15분`
 - 다 외우기 위하여 반복 학습이 필요한 횟수 `3번`
 
-- 개발 회사에 다니시지만 Git을 모르신다면 바로 읽어주세요.
-- Git을 도입할지 망설이시는 관리자, 담당자분들은 바로 읽어주세요.
-- 2명이상의 협업을 하는 스타트업, 인디 개발자는 도입을 고려해주세요.
+## 누가 읽어야 할까요
 
-- 잘못 기술되었거나, 추가되었으면 하는 내용은 kennethan@nhpcw.com으로 형식 상관없이 보내주시면
- 
- 3일 내 반영하(도록 노력하)겠습니다.
+- 개발 회사에 일하는 Git을 모르시는 개발자.
+- Git을 도입할지 망설이시는 관리자, 담당자.
+- 2명이상의 협업을 하는 스타트업 담당자, 인디 개발자는 도입을 고려해주세요.
 
-### 시작하며
+## 시작하며
 
-##### 깃을 왜 사용하죠?
+### 깃을 왜 사용하죠?
 
 - 빠른 협업환경 조성
-- 누가 언제 무엇을 왜 수정했는지 코드리뷰가 가능.
-- IssueTracker 및 Migrate 연동 지원.
-- GitHub를 이용하여 자신의 git을 쉽게 전파, 공유가 가능.
-- Continuous Integration (지속적인 통합) 지원.
-- VisualStudio, Eclipse, Android Studio 등 많은 부분에서 Git연동 제공.
+- 누가, 언제, 무엇을, 왜, 어떻게 수정했는지 코드리뷰가 가능.
+- 이슈트래커 (Issue Tracker) 지원.
+- 깃헙 (GitHub)을 이용하여 자신의 git을 쉽게 공유 가능.
+- 지속적인 통합 (Continuous Integration) 지원.
+- Visual Studio, Jetbrains IntelliJ, Android Studio 등 대부분의 IDE에서 git 연동 제공.
 
-- **결국 대게는 협업을 위해서 사용**
+- **요약**: 협업을 위해서, 개발에서 사용, 두명 이상이 똑똑하게 소스를 공유하고 개발한 소스들을 합치세요!
 
-##### 깃이 어떤 역할을 하는건가요?
+### 도대체 깃헙(GitHub)이 뭐야!?
 
-- 소스 병합
-- 소스 리비전 관리
-- 소스 릴리즈
-- 소스 태깅
-- 소스 기록, 업로드
-- 소스 변경사항 검토
+- 디자이너에게는 [Dribbble](https://dribbble.com/), 데이터사이언티스트에게는 [Kaggle](https://www.kaggle.com/)이 있듯이 개발자에게는 [깃헙 (Github)](https://github.com)가 있습니다.
+- 여러분이 퇴근길에 페이스북으로 글을 둘러보며 좋아요 하듯이 개발자들은 깃헙으로 [스타(star)](https://help.github.com/articles/about-stars/)를 날립니다.
+- ~진짜 퇴근길에 깃헙 들어가는 개발자가 있다면 :scream:~
+- 깃헙(Github)랑 깃(Git)은 다른 것입니다. 깃헙이 깃을 기반으로 온라인으로 서비스하는 형태입니다.
+- 쉽게 생각해서 Microsoft® Office를 Office 365로 서비스하는 것과 비슷하다 생각해주세요.
 
-##### 깃은 어디에서 지원하나요?
+### 깃이 어떤 역할을 하는건가요?
 
-- Windows
-- Mac
-- Linux, Unix 계열
+- 소스 병합 (merge, rebase)
+- 소스 리비전 관리 (reset, commit, branch)
+- 소스 릴리즈 (push)
+- 소스 태깅 (tag)
+- 소스 변경사항 검토 (diff, log)
 
-----
+### 깃은 어디에서 지원하나요?
 
-### 깃의 기능
+- 윈도우즈 (Windows)
+- 맥 (OS X)
+- 리눅스 (Ubuntu, CentOS, Redhat, Debian, etc)
+- 유닉스 (FreeBSD, Solaris, etc)
 
-#### 깃의 설정 (클라이언트)
+## 설정
 - 처음 시작하는 것이라면 git의 config 과정을 진행해야합니다.
 - `git config` 명령어를 이용하여 계정에 대한 정보를 설정합니다.
 
- ```bash
+```bash
 $ git config --global user.name "Kenneth"
 $ git config --global user.email "kennethan@nhpcw.com"
 ```
@@ -61,51 +60,49 @@ $ git config --global user.email "kennethan@nhpcw.com"
 - 혹여나 GitHub에서 클론을 받은경우 이 작업은 필요하지 않습니다.
 - 아래 샘플 코드를 확인해주세요.
 
- ```bash
+```bash
 $ git init
 ```
-- `git init`을 하셨으면 Git 리모트를 설정하실 수 있습니다.
-- Git 리모트란 Git을 원격저장소에 저장하는 앤드포인트를 의미합니다.
+- `git init`을 하셨으면 git 리모트를 설정하실 수 있습니다.
+- git 리모트란 git을 원격저장소에 저장하는 앤드포인트를 의미합니다.
 
- ```bash
+```bash
 $ git remote add origin https://github.com/KennethanCeyer/tutorial.git
 ```
 
-- 깃의 리모트 URL을 이용하여 원격저장소에 저장된 파일을 컴퓨터로 복사해올 수 있습니다.
-- 이때 `git clone`을 사용하여 복사를 시작합니다.
+- git 리모트 URL을 이용하여 원격저장소에 저장된 파일을 컴퓨터로 복사해올 수 있습니다.
+- 이때 `git clone` 명령어를 사용하여 복사를 시작합니다.
 
- ```bash
+```bash
 $ git clone https://github.com/KennethanCeyer/tutorial.git
 ```
 
-- `git clone`을 통해 원격파일을 복사해오면, origin에는 기본적으로 클론해온 리모트 URL이 저장되있습니다.
+- `git clone`을 통해 원격파일을 복사해오면, `origin` 에는 기본적으로 클론해온 리모트 URL이 저장되있습니다.
 
-----
+## SSH
 
-#### SSH 접속설정
-
-- 깃 연결을 보다 안전하고 빠르게 하기 위해서는 `SSH Key` 등록을 권장합니다.
+- git 연결을 보다 안전하고 빠르게 하기 위해서는 `SSH Key` 등록을 권장합니다.
 - 이미 존재하는 문서로 [SSH 생성 가이드](https://git-scm.com/book/ko/v1/Git-%EC%84%9C%EB%B2%84-SSH-%EA%B3%B5%EA%B0%9C%ED%82%A4-%EB%A7%8C%EB%93%A4%EA%B8%B0)를 참고하시거나 아래 절차를 따라주시면 됩니다.
-- 우선 `ssh-keygen`으로 SSH Key를 생성하시면 됩니다.
+- 우선 `ssh-keygen` 명령어로 SSH Key를 생성하시면 됩니다.
 
  ![Refer SSH](http://www.pigno.se/static/assets/images/git_tutorial_refer_ssh.png)
  
-- SSH Key를 생성하셨으면 ~/[사용자 폴더]/.ssh/에 파일이 존재하는 것을 확인하실 수 있습니다.
+- SSH Key를 생성하셨으면 `~/[사용자 폴더]/.ssh/` 에 파일이 존재하는 것을 확인하실 수 있습니다.
 
  ![Refer folder ssh](http://www.pigno.se/static/assets/images/git_tutorial_refer_ssh_folder.png)
  
 - 생성한 키 중 `id_rsa.pub`는 GitHub에 등록해주셔야 합니다.
 - 아래 절차를 따라해주시면 됩니다.
 - [GitHub 홈페이지](http://www.github.com)를 접속하셔서 로그인을 해주세요.
-- Profile 중 `Settings` 메뉴를 눌러주세요 (아래 그림을 참고해주세요.)
+- `Profile` 중 `Settings` 메뉴를 눌러주세요 (아래 그림을 참고해주세요.)
 
  ![Refer Setting](http://www.pigno.se/static/assets/images/git_tutorial_settings.png)
  
-- Settings 화면 중 우측 사이드메뉴에서 `SSH and GPG keys`를 클릭해주세요.
+- `Settings` 화면 중 우측 사이드메뉴에서 `SSH and GPG keys`를 클릭해주세요.
 
  ![Refer SSH Keys](http://www.pigno.se/static/assets/images/git_tutorial_settings_sshkey.png)
  
-- SSH Keys 화면에서 `New SSH key` 버튼을 찾아 클릭 해주세요.
+- `SSH Keys` 화면에서 `New SSH key` 버튼을 찾아 클릭 해주세요.
 
  ![Refer New SSH key](http://www.pigno.se/static/assets/images/git_tutorial_refer_new_ssh_key.png)
  
@@ -134,37 +131,33 @@ $ git remote set-url origin git@github.com:KennethanCeyer/tutorial-git.git
 $ git remote show origin
 ```
 
-----
-
-#### 소스 기록, 업로드
+## 소스 기록
 
 - 소스를 업로드 하기 위해서는 `git add` 명령어를 이용합니다.
 - 샘플을 참고하세요
 
  ```bash
-$ git add *
+$ git add .
 ```
 
 - ignore 파일이나, 삭제한 파일 이력까지 커밋을 하실 경우, `-f` 옵션을 이용합니다.
 
  ```bash
-$ git add * -f
+$ git add . -f
 ```
 
 - `git remote show origin`을 통해 origin에 리모트 주소가 잘 등록되었는지 확인해보세요.
 
  ![Remote show origin](http://www.pigno.se/static/assets/images/git_tutorial_refer_remote_origin.png)
 
-----
+## 소스 커밋
 
-#### 소스 커밋, 메시지 작성
-
-- 소스를 커밋하시면 `Staged` 상태의 파일이 히스토리로 기록되고 적재됩니다.
+- 소스를 커밋하시면 `staged` 상태의 파일이 히스토리로 기록되고 적재됩니다.
 - 파일 추적상태의 경우 `git status` 명령을 이용해서 확인합니다.
 
- ```bash
+```bash
 $ git status
- ```
+```
 
 - `git add` 이후 `git status`를 하면 아래와 같은 화면이 나옵니다.
 
@@ -188,14 +181,12 @@ $ git add *
 $ git commit -m "UI 레이아웃 이슈 수정 및 관리자 벨리데이션 추가." --amend
 ```
 
-----
-
-#### 소스 업데이트, 커밋된 내용 다운로드
+#### 소스 업데이트
 
 - 상대방이 커밋한 파일은 명령어를 통해서 직접 업데이트를 하셔야 동기화가 됩니다.
 - 이때 사용하는 명령어는 `git pull`과 `git fetch`가 있습니다.
 
- ```bash
+```bash
 # master 브랜치를 pull하여 업데이트
 $ git pull origin master
   
@@ -203,19 +194,17 @@ $ git pull origin master
 $ git fetch origin master
 ```
 
-- Pull과 Fetch의 차이점은 merge 작업을 하느냐 안하느냐로 나뉘어지며.
-- Pull은 Fetch + Merge 작업이라고 생각하시면 됩니다.
+- `pull` 과 `fetch` 의 차이점은 `merge` 작업을 하느냐 안하느냐로 나뉘어지며.
+- `pull` 은 `fetch` + `merge` 작업이라고 생각하시면 됩니다.
 
-----
-
-#### 소스의 복원, 리셋
+#### 소스 복원
 
 - 여러분이 git을 쓰는 이유중에 중요한 부분을 차지하는 영역입니다.
 - 정상적으로 커밋된 히스토리는, 리비전으로 git에 관리됩니다.
 - 실수로 잘못 작업하였거나, 예전 버전으로 롤백하여 적용할 경우 여러분은 예전 버전으로 리셋하실 수 있습니다.
 - 리셋은 `git reset` 명령을 사용합니다.
 
- ```bash
+```bash
 $ git reset HEAD^ --soft
 ```
 
@@ -234,7 +223,7 @@ $ git reset HEAD^ --soft
 
 - 되돌리는 위치의 경우 아래와 같은 타입이 있습니다.
 
- ```bash
+```bash
 # 바로 이전 단계로 인덱스와 워킹트리를 버리고 리셋.
 $ git reset HEAD^ --hard 
     
@@ -245,9 +234,7 @@ $ git reset HEAD~2 --hard
 $ git reset 991ee8c --mixed
 ```
 
-----
-
-#### 브랜치
+## 브랜치
 
 - 브랜치는 한국말로 가지(branch)입니다.
 - git에서는 마치 가지를 펼치듯 하나의 근본에서 여러 갈래로 쪼개어 관리할 수 있습니다.
@@ -264,7 +251,7 @@ $ git reset 991ee8c --mixed
 - 브랜치를 새로 만드신다면 `git branch [브랜치명]`으로 생성합니다.
 - 아래 명령라인에서는 new라는 브랜치를 생성하고 있습니다.
 
- ```bash
+```bash
 $ git branch new
 ```
 
@@ -273,13 +260,13 @@ $ git branch new
 
 - 생성된 new 브랜치로 접속하기 위해서는 `git checkout [브랜치명]`을 이용합니다.
 
- ```bash
+```bash
 $ git checkout new
 ```
 
  - 생성과정과 브랜치 이동과정을 동시에 하고자 하면 `git checkout`에 `-b` 옵션을 이용합니다.
 
- ```bash
+```bash
 # 브랜치 new를 생성과 동시에 체크아웃.
 $ git checkout -b new
 ```
@@ -288,7 +275,7 @@ $ git checkout -b new
 - 협업 작업에서는 생성한 브랜치를 원격 저장소에 등록해주어야 합니다.
 - 이때는 `git push [브랜치명]`을 이용합니다.
 
- ```bash
+```bash
 $ git push new
 ```
 
@@ -303,9 +290,7 @@ $ git push new
 - 삭제된 브랜치 또한 원격 저장소에 반영을 해야합니다.
 - 이때 브랜치 명 앞에 콜론(:)을 붙여주어야 하니 이 점 주의해주세요.
 
-----
-
-#### 깃 머지와 리베이스
+## 소스 병합
 
 - 브랜치를 사용하는 과정에서 가장 중요한 머지와 리베이스 등의 병합 기법입니다.
 - 서로 다른 브랜치에서 서로 다른 코드가 개발되었고, 실제 배포에서 이를 합쳐야 할 때 사용합니다.
@@ -320,13 +305,13 @@ $ git push new
 - `master`에서 `sub` branch가 생성되었으며, master 브랜치에서 sub 브랜치를 머지하고자 합니다.
 - 파일 구성은 아래와 같습니다.
 
- ```plaintext
+```plaintext
 * master -> some_file.txt의 내용
 * 1번째 단계 HEAD
 I'm a file.
 ```
 
- ```plaintext
+```plaintext
 * sub -> some_file.txt의 내용
 * 2번째 단계 HEAD (최신)
 I'm a file.
@@ -336,7 +321,7 @@ Inserted new line from the sub branch.
 
 - 자세한 부분은 해당 깃의 `Tutorial/Merge`를 참고해주세요.
 
- ```bash
+```bash
 $ git checkout -f master
 $ git merge sub
 # 현재 브랜치 master, 대상 브랜치 sub.
@@ -347,22 +332,20 @@ $ git merge sub
 
 - 머지 이후 master에서 파일을 보면, 아래와 같은 내용을 얻습니다.
 
- ```plaintext
+```plaintext
 * merge 이후 master -> some_file.txt
 I'm a file.
     
 Inserted new line from the sub branch.
 ```
 
-----
-
-#### 충돌과 해결
+## 충돌과 해결
 
 - git으로 merge, rebase 수행시 충돌(conflict)가 발생 할 수 있습니다.
 - 이는 같은 조상을 기준으로, 서로 다른 두개의 브랜치가 같은 소스코드를 변경했을 때 발생합니다.
 - 아래는 샘플 환경입니다. `Tutorial/Conflict`를 참고해주세요.
 
- ```plaintext
+```plaintext
 * master -> some_file.txt의 내용
 Apple
 ```
@@ -370,7 +353,7 @@ Apple
 - 위는 `master` 브랜치의 some_file.txt의 내용이다.
 - 아래는 해당 브랜치를 복제한 `sub` 브랜치이며, 복제 이후 한번 내용을 수정하였다.
 
- ```plaintext
+```plaintext
 * sub -> some_file.txt의 내용
 * 2번째 단계 HEAD
 Banana
@@ -378,7 +361,7 @@ Banana
 
 - 이후 master에서도 내용을 변경하여 버전을 업데이트 합니다.
  
- ```plaintext
+```plaintext
 * master -> some_file.txt의 내용
 * 2번째 단계 HEAD(sub랑 단계가 겹침)
 Strawberry
@@ -388,7 +371,7 @@ Strawberry
 - 이 경우 충돌이 발생합니다.
 - 충돌이 발생한 some_file.txt를 열어보면 아래와 같은 내용을 보실 수 있습니다.
 
- ```plaintext
+```plaintext
 * 머지 이후 master -> some_file.txt (충돌)
 <<<<<<< HEAD
 Strawberry
@@ -402,14 +385,14 @@ Banana
 - 충돌이 해결 될 수 있습니다.
 - 여기서는 `master` 브랜치의 Strawberry를 선택하여 충돌을 해결하겠습니다.
 
- ```plaintext
+```plaintext
 * 머지 이후 master -> some_file.txt (수정)
 Strawberry
 ```
 
 - 수정이 되었다면 머지 해결을 위해 `git add`와 `git commit`으로 충돌(conflict)을 해결하세요.
 
- ```bash
+```bash
 $ git add *
 $ git commit -m "Solved the conflict issue."
 ```
