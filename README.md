@@ -1,6 +1,6 @@
 <h1 align="center">어떻게 깃을 사용하는지 빠르게 알아봅시다</h1>
 
-<p align="center"><img src="https://www.pigno.se/static/assets/images/octocat.svg" width="240"</p>
+<p align="center"><img src="https://www.pigno.se/static/assets/images/octocat.svg" width="240" /></p>
 
 <p align="center">Quick learn How to use the Git</p>
 
