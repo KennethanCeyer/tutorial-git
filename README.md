@@ -59,7 +59,7 @@
 
 ```bash
 $ git config --global user.name "Kenneth"
-$ git config --global user.email "kennethan@nhpcw.com"
+$ git config --global user.email "kenneth@pigno.se"
 ```
 
 - 깃은 초기에 `git init` 작업을 진행합니다
