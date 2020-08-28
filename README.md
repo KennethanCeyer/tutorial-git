@@ -280,7 +280,7 @@ $ git checkout -b new
 - 이때는 `git push [브랜치명]`을 이용합니다.
 
 ```bash
-$ git push new
+$ git push origin new
 ```
 
 - 브랜치 생성 및 등록의 과정은 아래 화면과 같습니다.
