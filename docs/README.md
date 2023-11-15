@@ -54,12 +54,13 @@
 - 유닉스 (FreeBSD, Solaris, etc)
 
 ## :wrench: 설정
+
 - 처음 시작하는 것이라면 git의 config 과정을 진행해야합니다.
 - `git config` 명령어를 이용하여 계정에 대한 정보를 설정합니다.
 
 ```bash
 $ git config --global user.name "Kenneth"
-$ git config --global user.email "kennethan@nhpcw.com"
+$ git config --global user.email "kenneth@pigno.se"
 ```
 
 - 깃은 초기에 `git init` 작업을 진행합니다
@@ -69,6 +70,7 @@ $ git config --global user.email "kennethan@nhpcw.com"
 ```bash
 $ git init
 ```
+
 - `git init`을 하셨으면 git 리모트를 설정하실 수 있습니다.
 - git 리모트란 git을 원격저장소에 저장하는 앤드포인트를 의미합니다.
 
@@ -91,48 +93,48 @@ $ git clone https://github.com/KennethanCeyer/tutorial.git
 - 이미 존재하는 문서로 [SSH 생성 가이드](https://git-scm.com/book/ko/v1/Git-%EC%84%9C%EB%B2%84-SSH-%EA%B3%B5%EA%B0%9C%ED%82%A4-%EB%A7%8C%EB%93%A4%EA%B8%B0)를 참고하시거나 아래 절차를 따라주시면 됩니다.
 - 우선 `ssh-keygen` 명령어로 SSH Key를 생성하시면 됩니다.
 
- ![Refer SSH](https://www.pigno.se/static/assets/images/git_tutorial_refer_ssh.png)
- 
+![Refer SSH](../docs/images/fcd72616-69b0-4712-9098-9206df777cad.png)
+
 - SSH Key를 생성하셨으면 `~/[사용자 폴더]/.ssh/` 에 파일이 존재하는 것을 확인하실 수 있습니다.
 
- ![Refer folder ssh](https://www.pigno.se/static/assets/images/git_tutorial_refer_ssh_folder.png)
- 
+![Refer folder ssh](../docs/images/f7c3fb60-63bd-4611-9db8-6b694028228d.png)
+
 - 생성한 키 중 `id_rsa.pub`는 GitHub에 등록해주셔야 합니다.
 - 아래 절차를 따라해주시면 됩니다.
 - [GitHub 홈페이지](http://www.github.com)를 접속하셔서 로그인을 해주세요.
 - `Profile` 중 `Settings` 메뉴를 눌러주세요 (아래 그림을 참고해주세요.)
 
- ![Refer Setting](https://www.pigno.se/static/assets/images/git_tutorial_settings.png)
- 
+![Refer Setting](../docs/images/edc03865-0e75-4fca-9577-8d63c5547808.png)
+
 - `Settings` 화면 중 우측 사이드메뉴에서 `SSH and GPG keys`를 클릭해주세요.
 
- ![Refer SSH Keys](https://www.pigno.se/static/assets/images/git_tutorial_settings_sshkey.png)
- 
+![Refer SSH Keys](../docs/images/6400a29a-92fd-476e-9389-6bcd37f58dab.png)
+
 - `SSH Keys` 화면에서 `New SSH key` 버튼을 찾아 클릭 해주세요.
 
- ![Refer New SSH key](https://www.pigno.se/static/assets/images/git_tutorial_refer_new_ssh_key.png)
- 
+![Refer New SSH key](../docs/images/1581b8f6-a8f4-455b-bd61-abc98be062db.png)
+
 - 입력 화면에 아까전의 `id_rsa.pub`의 내용을 입력해주시면 됩니다.
 
- ![Refer SSH contents](https://www.pigno.se/static/assets/images/git_tutorial_refer_ssh_pub_input.png)
- 
+![Refer SSH contents](../docs/images/1be45d6b-9b55-439b-bfd9-67b76dbf3860.png)
+
 **Q. SSH 설정을 해도 아이디와 비밀번호를 물어봐요!**
 
 > 접속 정보에서 Use SSH를 클릭해 SSH 접속 정보를 이용하시기 바랍니다.
 
-![SSH connection string](https://www.pigno.se/static/assets/images/git_tutorial_use_sshkey.png)
+![SSH connection string](../docs/images/99dda035-cfa6-4586-9827-82902cdeb609.png)
 
 이때, `git remote set-url` 명령어를 이용하여 기존의 원격지 주소를 수정해야 합니다.
 
-![SSH remote set-url](https://www.pigno.se/static/assets/images/git_tutorial_refer_set_url.png)
+![SSH remote set-url](../docs/images/63c9f406-7978-40bd-b3bd-53781bae8b07.png)
 
- ```bash
+```bash
 # 혹시 HTTPS 주소를 Remote URL로 사용하는지 체크해주세요.
 # Remote URL은 ssh 포맷을 사용해주셔야 ssh 인증을 통해 아이디/비밀번호 입력을 넘어가실 수 있습니다.
-    
+
 # origin의 Remote URL 변경방법.
 $ git remote set-url origin git@github.com:KennethanCeyer/tutorial-git.git
-    
+
 # origin의 Remote URL이 제대로 변경됬는지 체크해주세요.
 $ git remote show origin
 ```
@@ -142,19 +144,19 @@ $ git remote show origin
 - 소스를 업로드 하기 위해서는 `git add` 명령어를 이용합니다.
 - 샘플을 참고하세요
 
- ```bash
+```bash
 $ git add .
 ```
 
 - ignore 파일이나, 삭제한 파일 이력까지 커밋을 하실 경우, `-f` 옵션을 이용합니다.
 
- ```bash
+```bash
 $ git add . -f
 ```
 
 - `git remote show origin`을 통해 origin에 리모트 주소가 잘 등록되었는지 확인해보세요.
 
- ![Remote show origin](https://www.pigno.se/static/assets/images/git_tutorial_refer_remote_origin.png)
+![Remote show origin](../docs/images/171e7a0a-b9e7-43d0-b07b-3ed1e2eceeb4.png)
 
 ## :pencil2: 소스 커밋
 
@@ -167,18 +169,18 @@ $ git status
 
 - `git add` 이후 `git status`를 하면 아래와 같은 화면이 나옵니다.
 
- ![Git add files](https://www.pigno.se/static/assets/images/git_tutorial_refer_add.png)
+![Git add files](../docs/images/6382ff87-4c55-4c3f-9c99-ff92906e6df4.png)
 
 - Staged 상태의 파일은 아직 기록된 상태가 아닙니다.
 - 파일의 기록을 위해서는 `커밋` 작업이 필요합니다.
 - `git commit` 명령을 통해 Staged 상태의 파일을 커밋할 수 있습니다.
 
-![Git commit](https://www.pigno.se/static/assets/images/git_tutorial_refer_commit.png)
+![Git commit](../docs/images/ae9b3394-acce-41e5-ba59-773d3236829f.png)
 
 - `-m` 옵션을 이용하여 커밋 메시지를 작성하는 것을 권장합니다.
 - 실수로 커밋을 하여, 다시 커밋을 할 경우 커밋을 덮어씌울 수 있습니다. 이때 `--amend` 옵션을 이용합니다.
 
- ```bash
+```bash
 $ git add *
 $ git commit -m "UI 레이아웃 이슈 수정."
 
@@ -193,11 +195,11 @@ $ git commit -m "UI 레이아웃 이슈 수정 및 관리자 벨리데이션 추
 - 이때 사용하는 명령어는 `git pull`과 `git fetch`가 있습니다.
 
 ```bash
-# master 브랜치를 pull하여 업데이트
-$ git pull origin master
-  
-# master 브랜치를 fetch하여 업데이트
-$ git fetch origin master
+# main 브랜치를 pull하여 업데이트
+$ git pull origin main
+
+# main 브랜치를 fetch하여 업데이트
+$ git fetch origin main
 ```
 
 - `pull` 과 `fetch` 의 차이점은 `merge` 작업을 하느냐 안하느냐로 나뉘어지며.
@@ -221,19 +223,19 @@ $ git reset HEAD^ --soft
 - `git reset`의 옵션 중 리셋 특성을 정하는 `--soft, --hard, --mixed` 옵션이 있습니다.
 - 위 옵션은 아래에서 자세히 설명합니다.
 
- - `--soft`는 약한특성의 리셋입니다, 되돌릴 때 기존의 인덱스와 워킹트리를 보존합니다.
- - `--hard`는 강한특성의 리셋입니다, 되돌릴 때 기존의 인덱스와 워킹트리를 버립니다.
- - `--mixed`는 중간특성의 리셋입니다, 되돌릴 때 기존의 인덱스는 버리고 워킹트리를 보존합니다.
+- `--soft`는 약한특성의 리셋입니다, 되돌릴 때 기존의 인덱스와 워킹트리를 보존합니다.
+- `--hard`는 강한특성의 리셋입니다, 되돌릴 때 기존의 인덱스와 워킹트리를 버립니다.
+- `--mixed`는 중간특성의 리셋입니다, 되돌릴 때 기존의 인덱스는 버리고 워킹트리를 보존합니다.
 
 - 되돌리는 위치의 경우 아래와 같은 타입이 있습니다.
 
 ```bash
 # 바로 이전 단계로 인덱스와 워킹트리를 버리고 리셋.
-$ git reset HEAD^ --hard 
-    
+$ git reset HEAD^ --hard
+
 # 바로 두번째 전 단계로 인덱스와 워킹트리를 버리고 리셋.
-$ git reset HEAD~2 --hard 
-    
+$ git reset HEAD~2 --hard
+
 # 특정 리비전의 기록으로 인덱스는 버리고 워킹트리를 보존하여 리셋.
 $ git reset 991ee8c --mixed
 ```
@@ -243,14 +245,13 @@ $ git reset 991ee8c --mixed
 - 브랜치는 한국말로 가지(branch)입니다.
 - git에서는 마치 가지를 펼치듯 하나의 근본에서 여러 갈래로 쪼개어 관리할 수 있습니다.
 
- ![Git branch](https://www.pigno.se/static/assets/images/git_tutorial_branch.png)
- 이미지 출처 [StackOverflow](http://stackoverflow.com/questions/23142731/push-a-feature-branch-to-develop-branch-using-git)
-
+![Git branch](https://www.pigno.se/static/assets/images/git_tutorial_branch.png)
+이미지 출처 [StackOverflow](http://stackoverflow.com/questions/23142731/push-a-feature-branch-to-develop-branch-using-git)
 
 - branch의 특징은 아래와 같습니다.
 
- - 기본은 master 브랜치라고 불리며, 필수로 제공되는 브랜치이다.
- - 서로다른 브랜치들은 같은 조상을 가지고 있다.
+- 기본은 main 브랜치라고 불리며, 필수로 제공되는 브랜치이다.
+- 서로다른 브랜치들은 같은 조상을 가지고 있다.
 
 - 브랜치를 새로 만드신다면 `git branch [브랜치명]`으로 생성합니다.
 - 아래 명령라인에서는 new라는 브랜치를 생성하고 있습니다.
@@ -259,8 +260,9 @@ $ git reset 991ee8c --mixed
 $ git branch new
 ```
 
-- master 기준으로 new를 브랜치(가지치기)하면 master와 똑같은 소스코드가 new에도 적용됩니다.
-- 하지만 이 이후로 new에서 코드를 수정하면, master와 new는 서로 다른 코드가 되기 때문에 갈라집니다.
+- main 기준으로 new를 브랜치(가지치기)하면 main와 똑같은 소스코드가 new에도 적용됩니다.
+  _(\* 예전에는 main 대신 master 브랜치를 기본으로 썼습니다, 예전 git 프로그램을 사용하시는 분은 master가 기본 브랜치로 보이게 됩니다.)_
+- 하지만 이 이후로 new에서 코드를 수정하면, main과 new는 서로 다른 코드가 되기 때문에 갈라집니다.
 
 - 생성된 new 브랜치로 접속하기 위해서는 `git checkout [브랜치명]`을 이용합니다.
 
@@ -268,7 +270,7 @@ $ git branch new
 $ git checkout new
 ```
 
- - 생성과정과 브랜치 이동과정을 동시에 하고자 하면 `git checkout`에 `-b` 옵션을 이용합니다.
+- 생성과정과 브랜치 이동과정을 동시에 하고자 하면 `git checkout`에 `-b` 옵션을 이용합니다.
 
 ```bash
 # 브랜치 new를 생성과 동시에 체크아웃.
@@ -280,16 +282,16 @@ $ git checkout -b new
 - 이때는 `git push [브랜치명]`을 이용합니다.
 
 ```bash
-$ git push new
+$ git push origin new
 ```
 
 - 브랜치 생성 및 등록의 과정은 아래 화면과 같습니다.
 
- ![Git new branch](https://www.pigno.se/static/assets/images/git_tutorial_new_branch.png)
+![Git new branch](../docs/images/df9d1bfd-9a09-4158-91e2-3809424877b2.png)
 
 - 브랜치의 삭제는 `git branch` 명령에서 `-d` 옵션을 사용합니다.
 
- ![Git delete branch](https://www.pigno.se/static/assets/images/git_tutorial_delete_branch.png)
+![Git delete branch](../docs/images/070848b0-b343-4300-89e7-78fc374eb672.png)
 
 - 삭제된 브랜치 또한 원격 저장소에 반영을 해야합니다.
 - 이때 브랜치 명 앞에 콜론(:)을 붙여주어야 하니 이 점 주의해주세요.
@@ -301,16 +303,16 @@ $ git push new
 - 병합 방식에서는 크게 `git merge`와 `git rebase`가 존재합니다.
 - 머지 방식과 리베이스 방식의 차이는 아래 이미지를 확인해주세요.
 
- ![Difference between merge and rebase](https://www.pigno.se/static/assets/images/git_tutorial_merge_rebase.png)
- 
- 이미지 출처 [http://git.mikeward.org/](http://git.mikeward.org/)
+![Difference between merge and rebase](https://www.pigno.se/static/assets/images/git_tutorial_merge_rebase.png)
+
+이미지 출처 [http://git.mikeward.org/](http://git.mikeward.org/)
 
 - 아래는 머지해야 하는 상황을 구현해봤습니다.
-- `master`에서 `sub` branch가 생성되었으며, master 브랜치에서 sub 브랜치를 머지하고자 합니다.
+- `main`에서 `sub` branch가 생성되었으며, main 브랜치에서 sub 브랜치를 머지하고자 합니다.
 - 파일 구성은 아래와 같습니다.
 
 ```plaintext
-* master -> some_file.txt의 내용
+* main -> some_file.txt의 내용
 * 1번째 단계 HEAD
 I'm a file.
 ```
@@ -319,25 +321,25 @@ I'm a file.
 * sub -> some_file.txt의 내용
 * 2번째 단계 HEAD (최신)
 I'm a file.
-    
+
 Inserted new line from the sub branch.
 ```
 
 ```bash
-$ git checkout -f master
+$ git checkout -f main
 $ git merge sub
-# 현재 브랜치 master, 대상 브랜치 sub.
-# master에서 sub를 머지합니다.
-# HEAD -> master
+# 현재 브랜치 main, 대상 브랜치 sub.
+# main에서 sub를 머지합니다.
+# HEAD -> main
 # sub  -> sub
 ```
 
-- 머지 이후 master에서 파일을 보면, 아래와 같은 내용을 얻습니다.
+- 머지 이후 main에서 파일을 보면, 아래와 같은 내용을 얻습니다.
 
 ```plaintext
-* merge 이후 master -> some_file.txt
+* merge 이후 main -> some_file.txt
 I'm a file.
-    
+
 Inserted new line from the sub branch.
 ```
 
@@ -347,11 +349,11 @@ Inserted new line from the sub branch.
 - 이는 같은 조상을 기준으로, 서로 다른 두개의 브랜치가 같은 소스코드를 변경했을 때 발생합니다.
 
 ```plaintext
-* master -> some_file.txt의 내용
+* main -> some_file.txt의 내용
 Apple
 ```
 
-- 위는 `master` 브랜치의 some_file.txt의 내용이다.
+- 위는 `main` 브랜치의 some_file.txt의 내용이다.
 - 아래는 해당 브랜치를 복제한 `sub` 브랜치이며, 복제 이후 한번 내용을 수정하였습니다.
 
 ```plaintext
@@ -360,10 +362,10 @@ Apple
 Banana
 ```
 
-- 이후 master에서도 내용을 변경하여 버전을 업데이트 합니다.
- 
+- 이후 main에서도 내용을 변경하여 버전을 업데이트 합니다.
+
 ```plaintext
-* master -> some_file.txt의 내용
+* main -> some_file.txt의 내용
 * 2번째 단계 HEAD(sub랑 단계가 겹침)
 Strawberry
 ```
@@ -373,7 +375,7 @@ Strawberry
 - 충돌이 발생한 some_file.txt를 열어보면 아래와 같은 내용을 보실 수 있습니다.
 
 ```plaintext
-* 머지 이후 master -> some_file.txt (충돌)
+* 머지 이후 main -> some_file.txt (충돌)
 <<<<<<< HEAD
 Strawberry
 =======
@@ -381,13 +383,13 @@ Banana
 >>>>>>> sub
 ```
 
-- 여기서 `HEAD`는 현재 브랜치(master)를 의미합니다.
+- 여기서 `HEAD`는 현재 브랜치(main)를 의미합니다.
 - HEAD와 sub의 각각 내용을 보여주고 있는데 꺽쇠(<, >), 이퀄(=)기호가 없도록 문장 하나를 선택해서 반영해주어야
 - 충돌이 해결 될 수 있습니다.
-- 여기서는 `master` 브랜치의 Strawberry를 선택하여 충돌을 해결하겠습니다.
+- 여기서는 `main` 브랜치의 Strawberry를 선택하여 충돌을 해결하겠습니다.
 
 ```plaintext
-* 머지 이후 master -> some_file.txt (수정)
+* 머지 이후 main -> some_file.txt (수정)
 Strawberry
 ```
 
@@ -400,6 +402,6 @@ $ git commit -m "Solved the conflict issue."
 
 ## :mag: 라이센스
 
-![cc license](http://i.creativecommons.org/l/by/4.0/88x31.png)
+![cc license](../docs/images/c1887b04-8634-4965-a853-e76ab10887f6.png)
 
 이 가이드는 Creative Commons Attribution 4.0 (CCL 4.0)을 따릅니다.
