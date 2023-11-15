@@ -193,11 +193,11 @@ $ git commit -m "UI 레이아웃 이슈 수정 및 관리자 벨리데이션 추
 - 이때 사용하는 명령어는 `git pull`과 `git fetch`가 있습니다.
 
 ```bash
-# master 브랜치를 pull하여 업데이트
-$ git pull origin master
+# main 브랜치를 pull하여 업데이트
+$ git pull origin main
   
-# master 브랜치를 fetch하여 업데이트
-$ git fetch origin master
+# main 브랜치를 fetch하여 업데이트
+$ git fetch origin main
 ```
 
 - `pull` 과 `fetch` 의 차이점은 `merge` 작업을 하느냐 안하느냐로 나뉘어지며.
@@ -249,7 +249,7 @@ $ git reset 991ee8c --mixed
 
 - branch의 특징은 아래와 같습니다.
 
- - 기본은 master 브랜치라고 불리며, 필수로 제공되는 브랜치이다.
+ - 기본은 main 브랜치라고 불리며, 필수로 제공되는 브랜치이다.
  - 서로다른 브랜치들은 같은 조상을 가지고 있다.
 
 - 브랜치를 새로 만드신다면 `git branch [브랜치명]`으로 생성합니다.
@@ -259,8 +259,9 @@ $ git reset 991ee8c --mixed
 $ git branch new
 ```
 
-- master 기준으로 new를 브랜치(가지치기)하면 master와 똑같은 소스코드가 new에도 적용됩니다.
-- 하지만 이 이후로 new에서 코드를 수정하면, master와 new는 서로 다른 코드가 되기 때문에 갈라집니다.
+- main 기준으로 new를 브랜치(가지치기)하면 main와 똑같은 소스코드가 new에도 적용됩니다.
+_(* 예전에는 main 대신 master 브랜치를 기본으로 썼습니다, 예전 git 프로그램을 사용하시는 분은 master가 기본 브랜치로 보이게 됩니다.)_
+- 하지만 이 이후로 new에서 코드를 수정하면, main과 new는 서로 다른 코드가 되기 때문에 갈라집니다.
 
 - 생성된 new 브랜치로 접속하기 위해서는 `git checkout [브랜치명]`을 이용합니다.
 
@@ -306,11 +307,11 @@ $ git push origin new
  이미지 출처 [http://git.mikeward.org/](http://git.mikeward.org/)
 
 - 아래는 머지해야 하는 상황을 구현해봤습니다.
-- `master`에서 `sub` branch가 생성되었으며, master 브랜치에서 sub 브랜치를 머지하고자 합니다.
+- `main`에서 `sub` branch가 생성되었으며, main 브랜치에서 sub 브랜치를 머지하고자 합니다.
 - 파일 구성은 아래와 같습니다.
 
 ```plaintext
-* master -> some_file.txt의 내용
+* main -> some_file.txt의 내용
 * 1번째 단계 HEAD
 I'm a file.
 ```
@@ -324,18 +325,18 @@ Inserted new line from the sub branch.
 ```
 
 ```bash
-$ git checkout -f master
+$ git checkout -f main
 $ git merge sub
-# 현재 브랜치 master, 대상 브랜치 sub.
-# master에서 sub를 머지합니다.
-# HEAD -> master
+# 현재 브랜치 main, 대상 브랜치 sub.
+# main에서 sub를 머지합니다.
+# HEAD -> main
 # sub  -> sub
 ```
 
-- 머지 이후 master에서 파일을 보면, 아래와 같은 내용을 얻습니다.
+- 머지 이후 main에서 파일을 보면, 아래와 같은 내용을 얻습니다.
 
 ```plaintext
-* merge 이후 master -> some_file.txt
+* merge 이후 main -> some_file.txt
 I'm a file.
     
 Inserted new line from the sub branch.
@@ -347,11 +348,11 @@ Inserted new line from the sub branch.
 - 이는 같은 조상을 기준으로, 서로 다른 두개의 브랜치가 같은 소스코드를 변경했을 때 발생합니다.
 
 ```plaintext
-* master -> some_file.txt의 내용
+* main -> some_file.txt의 내용
 Apple
 ```
 
-- 위는 `master` 브랜치의 some_file.txt의 내용이다.
+- 위는 `main` 브랜치의 some_file.txt의 내용이다.
 - 아래는 해당 브랜치를 복제한 `sub` 브랜치이며, 복제 이후 한번 내용을 수정하였습니다.
 
 ```plaintext
@@ -360,10 +361,10 @@ Apple
 Banana
 ```
 
-- 이후 master에서도 내용을 변경하여 버전을 업데이트 합니다.
+- 이후 main에서도 내용을 변경하여 버전을 업데이트 합니다.
  
 ```plaintext
-* master -> some_file.txt의 내용
+* main -> some_file.txt의 내용
 * 2번째 단계 HEAD(sub랑 단계가 겹침)
 Strawberry
 ```
@@ -373,7 +374,7 @@ Strawberry
 - 충돌이 발생한 some_file.txt를 열어보면 아래와 같은 내용을 보실 수 있습니다.
 
 ```plaintext
-* 머지 이후 master -> some_file.txt (충돌)
+* 머지 이후 main -> some_file.txt (충돌)
 <<<<<<< HEAD
 Strawberry
 =======
@@ -381,13 +382,13 @@ Banana
 >>>>>>> sub
 ```
 
-- 여기서 `HEAD`는 현재 브랜치(master)를 의미합니다.
+- 여기서 `HEAD`는 현재 브랜치(main)를 의미합니다.
 - HEAD와 sub의 각각 내용을 보여주고 있는데 꺽쇠(<, >), 이퀄(=)기호가 없도록 문장 하나를 선택해서 반영해주어야
 - 충돌이 해결 될 수 있습니다.
-- 여기서는 `master` 브랜치의 Strawberry를 선택하여 충돌을 해결하겠습니다.
+- 여기서는 `main` 브랜치의 Strawberry를 선택하여 충돌을 해결하겠습니다.
 
 ```plaintext
-* 머지 이후 master -> some_file.txt (수정)
+* 머지 이후 main -> some_file.txt (수정)
 Strawberry
 ```
 
